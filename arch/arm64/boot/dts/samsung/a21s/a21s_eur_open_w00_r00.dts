@@ -2767,7 +2767,7 @@
 					phandle = <0x69>;
 				};
 
-				panel_power_enable_boot {
+				panel_boot_enable {
 					type = "regulator,enable", "vdd_ldo28", "regulator,enable", "gpio_lcd_rst", "regulator,enable", "gpio_lcd_bl_en";
 				};
 
@@ -2826,7 +2826,7 @@
 			decon_board_hx83104 {
 				phandle = <0x14>;
 
-				panel_power_enable_boot {
+				panel_boot_enable {
 					type = "regulator,enable", "vdd_ldo28", "regulator,enable", "gpio_lcd_rst", "regulator,enable", "gpio_lcd_bl_en";
 				};
 
@@ -2885,7 +2885,7 @@
 			decon_board_nt36575 {
 				phandle = <0x15>;
 
-				panel_power_enable_boot {
+				panel_boot_enable {
 					type = "regulator,enable", "vdd_ldo28", "regulator,enable", "gpio_lcd_rst", "regulator,enable", "gpio_lcd_bl_en";
 				};
 
