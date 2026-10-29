@@ -2786,6 +2786,10 @@
 				panel_reset_disable {
 					type = "regulator,disable", "gpio_lcd_rst", "delay,usleep", "10000";
 				};
+
+				panel_not_connected {
+					type = "regulator,disable", "vdd_ldo28", "regulator,disable", "gpio_lcd_rst", "regulator,disable", "gpio_lcd_bl_en";
+				};
 			};
 
 			td4150 {
@@ -2845,6 +2849,10 @@
 				panel_reset_disable {
 					type = "regulator,disable", "gpio_lcd_rst", "delay,usleep", "10000";
 				};
+
+				panel_not_connected {
+					type = "regulator,disable", "vdd_ldo28", "regulator,disable", "gpio_lcd_rst", "regulator,disable", "gpio_lcd_bl_en";
+				};
 			};
 
 			hx83104 {
@@ -2903,6 +2911,10 @@
 
 				panel_reset_disable {
 					type = "delay,msleep", "60", "regulator,disable", "gpio_lcd_rst", "delay,usleep", "10000";
+				};
+
+				panel_not_connected {
+					type = "regulator,disable", "vdd_ldo28", "regulator,disable", "gpio_lcd_rst", "regulator,disable", "gpio_lcd_bl_en";
 				};
 			};
 

@@ -46,6 +46,7 @@ extern struct platform_driver panel_driver;
 extern int __init decon_notifier_init(void);
 extern int __init regulator_void_init(void);
 extern void __exit regulator_void_exit(void);
+extern int __init decon_board_late_initcall(void);
 extern int __init decon_assist_init(void);
 
 static int __init mcd_panel_register_init(void)
@@ -84,6 +85,11 @@ static int __init mcd_panel_register_init(void)
 	}
 
 	/* late_initcall_sync */
+	ret = decon_board_late_initcall();
+	if (ret) {
+		pr_err("failed to register decon_board_late_initcall\n");
+		return ret;
+	}
 	ret = decon_assist_init();
 	if (ret) {
 		pr_err("failed to register decon_assist_init\n");
