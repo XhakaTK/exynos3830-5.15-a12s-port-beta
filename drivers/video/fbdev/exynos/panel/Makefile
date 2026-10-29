@@ -25,3 +25,5 @@ mcd-panel-$(CONFIG_DYNAMIC_FREQ) += df/dynamic_freq.o
 mcd-panel-$(CONFIG_EXYNOS_DECON_LCD_DUMMY_LCD_V320) += dummy_lcd/dummy_lcd.o
 mcd-panel-$(CONFIG_EXYNOS_DECON_LCD_NT36525_XCOVER5) += nt36525/nt36525.o
 mcd-panel-$(CONFIG_EXYNOS_DECON_LCD_HX83104_A21S) += hx83104/hx83104.o
+mcd-panel-$(CONFIG_EXYNOS_DECON_LCD_TD4150_A21S) += td4150/td4150.o
+mcd-panel-$(CONFIG_EXYNOS_DECON_LCD_NT36575_A21S) += nt36575/nt36575.o

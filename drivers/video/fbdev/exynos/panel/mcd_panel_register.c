@@ -27,6 +27,13 @@ extern int __init nt36525_xcover5_panel_init(void);
 #if IS_ENABLED(CONFIG_EXYNOS_DECON_LCD_HX83104_A21S)
 extern int __init hx83104_a21s_panel_init(void);
 #endif
+#if IS_ENABLED(CONFIG_EXYNOS_DECON_LCD_TD4150_A21S)
+extern int __init td4150_a21s_panel_init(void);
+extern int __init td4150_a21s_dv_panel_init(void);
+#endif
+#if IS_ENABLED(CONFIG_EXYNOS_DECON_LCD_NT36575_A21S)
+extern int __init nt36575_a21s_panel_init(void);
+#endif
 
 static void __init register_model_panels(void)
 {
@@ -35,6 +42,13 @@ static void __init register_model_panels(void)
 #endif
 #if IS_ENABLED(CONFIG_EXYNOS_DECON_LCD_HX83104_A21S)
 	hx83104_a21s_panel_init();
+#endif
+#if IS_ENABLED(CONFIG_EXYNOS_DECON_LCD_TD4150_A21S)
+	td4150_a21s_panel_init();
+	td4150_a21s_dv_panel_init();
+#endif
+#if IS_ENABLED(CONFIG_EXYNOS_DECON_LCD_NT36575_A21S)
+	nt36575_a21s_panel_init();
 #endif
 }
 
