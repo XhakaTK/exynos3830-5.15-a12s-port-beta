@@ -193,6 +193,9 @@ obj-$(CONFIG_COUNTER)		+= counter/
 obj-$(CONFIG_MOST)		+= most/
 obj-$(CONFIG_TRUSTONIC_TEE)     += gud/
 obj-$(CONFIG_EXYNOS_BTS)        += bts/
+
+# SPU signature verify
+obj-$(CONFIG_SPU_VERIFY) += spu_verify/
 # sensor driver
 obj-y				+= sensors/
 

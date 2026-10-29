@@ -172,6 +172,8 @@ source "drivers/soc/Kconfig"
 
 source "drivers/samsung/Kconfig"
 
+source "drivers/spu_verify/Kconfig"
+
 source "drivers/devfreq/Kconfig"
 
 source "drivers/extcon/Kconfig"

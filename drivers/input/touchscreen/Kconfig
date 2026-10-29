@@ -1337,4 +1337,6 @@ config TOUCHSCREEN_ZINITIX
 
 source "drivers/input/touchscreen/synaptics_dsx/Kconfig"
 source "drivers/input/touchscreen/novatek/nt36525/Kconfig"
+source "drivers/input/touchscreen/himax/himax_83112/Kconfig"
+source "drivers/input/touchscreen/synaptics/td4150/Kconfig"
 endif
