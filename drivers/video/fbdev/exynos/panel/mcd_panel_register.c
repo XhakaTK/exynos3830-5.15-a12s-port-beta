@@ -24,11 +24,17 @@
 #if IS_ENABLED(CONFIG_EXYNOS_DECON_LCD_NT36525_XCOVER5)
 extern int __init nt36525_xcover5_panel_init(void);
 #endif
+#if IS_ENABLED(CONFIG_EXYNOS_DECON_LCD_HX83104_A21S)
+extern int __init hx83104_a21s_panel_init(void);
+#endif
 
 static void __init register_model_panels(void)
 {
 #if IS_ENABLED(CONFIG_EXYNOS_DECON_LCD_NT36525_XCOVER5)
 	nt36525_xcover5_panel_init();
+#endif
+#if IS_ENABLED(CONFIG_EXYNOS_DECON_LCD_HX83104_A21S)
+	hx83104_a21s_panel_init();
 #endif
 }
 
