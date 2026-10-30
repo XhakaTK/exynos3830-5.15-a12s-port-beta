@@ -1716,7 +1716,7 @@
 			#size-cells = <0x01>;
 
 			secgpio_dvs {
-				compatible = "samsung,exynos850-secgpio-dvs";
+				compatible = "samsung,s5e3830-secgpio-dvs";
 				status = "okay";
 			};
 
