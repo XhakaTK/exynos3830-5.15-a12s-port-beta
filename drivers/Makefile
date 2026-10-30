@@ -199,6 +199,9 @@ obj-$(CONFIG_SPU_VERIFY) += spu_verify/
 # sensor driver
 obj-y				+= sensors/
 
+# fingerprint sensor
+obj-$(CONFIG_SENSORS_FINGERPRINT)	+= fingerprint/
+
 # uH
 obj-$(CONFIG_UH)        += uh/
 obj-y += security/samsung/icdrv/ # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT

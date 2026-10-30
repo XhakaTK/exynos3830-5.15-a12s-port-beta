@@ -246,6 +246,8 @@ source "drivers/bts/Kconfig"
 
 source "drivers/sensors/Kconfig"
 
+source "drivers/fingerprint/Kconfig"
+
 source "drivers/security/samsung/icdrv/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/usb/typec/slsi/common/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
 source "drivers/misc/drb/Kconfig" # ADDED BY LEGO AUTOMATICALLY: DO NOT SUBMIT
