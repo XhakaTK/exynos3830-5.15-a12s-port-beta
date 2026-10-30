@@ -391,14 +391,6 @@
 		};
 	};
 
-	fragment@2 {
-		target = <0x15f>;
-
-		__overlay__ {
-			os-type = "pass";
-		};
-	};
-
 	fragment@3 {
 		target = <0xffffffff>;
 
