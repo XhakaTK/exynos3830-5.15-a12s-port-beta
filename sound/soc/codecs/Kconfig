@@ -1265,6 +1265,15 @@ config SND_SOC_SIRF_AUDIO_CODEC
 	tristate "SiRF SoC internal audio codec"
 	select REGMAP_MMIO
 
+config SND_SOC_SMA1303
+	tristate "Silicon Mitus SMA1303 speaker amplifier"
+	depends on I2C
+	help
+	  Config of SMA1303. It is a Smart power
+	  amplifier which contain speaker protection,
+	  multi-band DRC, equalizer function. It would
+	  be set to yes if device with SMA1303 on it.
+
 config SND_SOC_SPDIF
 	tristate "S/PDIF CODEC"
 
