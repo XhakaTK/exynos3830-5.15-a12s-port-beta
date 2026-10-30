@@ -1817,10 +1817,4 @@ config SND_SOC_TPA6130A2
 	depends on I2C
 
 
-config SND_SMARTPA_AW8896
-	tristate "SoC Audio for awinic aw8896 series"
-	depends on I2C
-	help
-	  This option enables support for aw8896 series Smart PA.
-
 endmenu

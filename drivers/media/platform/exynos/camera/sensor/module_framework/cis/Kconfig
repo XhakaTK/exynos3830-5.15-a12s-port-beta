@@ -46,13 +46,6 @@ config CAMERA_CIS_2P2_OBJ
 		help
 		  Use to build 2P2 camera sensor.
 
-config CAMERA_CIS_2P6_OBJ
-		tristate "Use 2P6 camera cis"
-	depends on CAMERA_CIS_SELECT
-		default n
-		help
-		  Use to build 2P6 camera sensor.
-
 config CAMERA_CIS_2P8_OBJ
 		tristate "Use 2P8 camera cis"
 	depends on CAMERA_CIS_SELECT
@@ -360,14 +353,6 @@ config CAMERA_CIS_5E9_OBJ
 		default n
 		help
 		  Use to build S5K5E9 camera sensor.
-
-config CAMERA_CIS_GC5035_OBJ
-	tristate "Use GC5035 camera cis"
-	depends on CAMERA_CIS_SELECT
-	default n
-	help
-	  Use to build GC5035 camera sensor.
-
 
 config CAMERA_CIS_GM1SP_OBJ
 		tristate "Use GM1SP camera cis"

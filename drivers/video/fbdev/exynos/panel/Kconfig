@@ -125,10 +125,6 @@ config SUPPORT_VCOM_TRIM_TEST
 	bool "Support VCOM TRIM test"
 	default n
 
-config EXYNOS_DECON_LCD_NT36525_XCOVER5
-	depends on EXYNOS_DECON_LCD
-	tristate "NT36525_XCOVER5 LCD driver"
-
 config EXYNOS_DECON_LCD_HX83104_A21S
 	depends on EXYNOS_DECON_LCD
 	tristate "HX83104_A21S LCD driver"
