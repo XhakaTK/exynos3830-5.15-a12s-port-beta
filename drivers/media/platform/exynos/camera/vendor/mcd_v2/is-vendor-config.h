@@ -22,7 +22,9 @@
 #define IS_MAX_FW_BUFFER_SIZE (4100 * 1024)
 #define IS_MAX_CAL_SIZE (64 * 1024)
 
-#if defined(CONFIG_CAMERA_HTV_V00)
+#if defined(CONFIG_CAMERA_AAS_V21S)
+#include "is-vendor-config_aas_v21s.h"
+#elif defined(CONFIG_CAMERA_HTV_V00)
 #include "is-vendor-config_htv_v00.h"
 #elif defined(CONFIG_CAMERA_AAV_V13)
 #include "is-vendor-config_aav_v13.h"
