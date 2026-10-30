@@ -24,4 +24,4 @@ export CLANG_TRIPLE=aarch64-linux-gnu-
 
 cd "$TREE"
 make exynos850-a21s_defconfig
-make -j"$JOBS" KCFLAGS=-w CONFIG_SECTION_MISMATCH_WARN_ONLY=y $TARGETS
+make -j"$JOBS" CONFIG_SECTION_MISMATCH_WARN_ONLY=y $TARGETS
