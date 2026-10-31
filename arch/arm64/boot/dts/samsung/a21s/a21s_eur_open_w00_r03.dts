@@ -3084,6 +3084,22 @@
 		};
 	};
 
+	fragment@ramoops {
+		target = <0xffffffff>;
+
+		__overlay__ {
+
+			ramoops {
+				compatible = "ramoops";
+				reg = <0x00 0xf1200000 0x800000>;
+				record-size = <0x40000>;
+				console-size = <0x100000>;
+				pmsg-size = <0x200000>;
+				ftrace-size = <0x200000>;
+			};
+		};
+	};
+
 	fragment@20 {
 		target = <0xffffffff>;
 
@@ -6550,6 +6566,7 @@
 	};
 
 	__fixups__ {
+		reserved_memory = "/fragment@ramoops:target:0";
 		exynos_adc = "/fragment@smd/__overlay__/samsung_mobile_device/sec_thermistor@0:io-channels:0", "/fragment@smd/__overlay__/samsung_mobile_device/battery:io-channels:0", "/fragment@common/__overlay__/acpm_mfd_bus@11A50000/aud3004x@07:io-channels:0", "/fragment@common/__overlay__/acpm_mfd_bus@11A50000/aud3004x@07:io-channels:8";
 		clock = "/fragment@smd/__overlay__/samsung_mobile_device/etspi-spi@0:clocks:0", "/fragment@smd/__overlay__/samsung_mobile_device/etspi-spi@0:clocks:8", "/fragment@45/__overlay__/sec-nfc@27:clocks:0";
 		gpg1 = "/fragment@smd/__overlay__/samsung_mobile_device/etspi-spi@0:etspi-sleepPin:0", "/fragment@2/__overlay__:mag-check-nfc:0", "/fragment@45/__overlay__/sec-nfc@27:sec-nfc,ven-gpio:0", "/fragment@45/__overlay__/sec-nfc@27:sec-nfc,firm-gpio:0", "/fragment@45/__overlay__/sec-nfc@27:sec-nfc,check_nfc:0", "/fragment@45/__overlay__/sec-nfc@27:sec-nfc,pvdd_en:0", "/fragment@camera/__overlay__/is_sensor_gc02m1_macro@A4/power_seq/scenario_normal_on/30:gpio:0", "/fragment@camera/__overlay__/is_sensor_gc02m1_macro@A4/power_seq/scenario_normal_off/80:gpio:0";

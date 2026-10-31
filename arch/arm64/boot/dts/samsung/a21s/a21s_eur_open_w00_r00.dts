@@ -2950,6 +2950,22 @@
 		};
 	};
 
+	fragment@ramoops {
+		target = <0xffffffff>;
+
+		__overlay__ {
+
+			ramoops {
+				compatible = "ramoops";
+				reg = <0x00 0xf1200000 0x800000>;
+				record-size = <0x40000>;
+				console-size = <0x100000>;
+				pmsg-size = <0x200000>;
+				ftrace-size = <0x200000>;
+			};
+		};
+	};
+
 	fragment@17 {
 		target = <0xffffffff>;
 
@@ -5884,6 +5900,7 @@
 	};
 
 	__fixups__ {
+		reserved_memory = "/fragment@ramoops:target:0";
 		exynos_adc = "/fragment@smd/__overlay__/samsung_mobile_device/sec_thermistor@0:io-channels:0", "/fragment@smd/__overlay__/samsung_mobile_device/battery:io-channels:0", "/fragment@common/__overlay__/acpm_mfd_bus@11A50000/aud3004x@07:io-channels:0", "/fragment@common/__overlay__/acpm_mfd_bus@11A50000/aud3004x@07:io-channels:8";
 		i2c_5 = "/fragment@3:target:0";
 		pinctrl_0 = "/fragment@4:target:0", "/fragment@5:target:0", "/fragment@11:target:0", "/fragment@13:target:0", "/fragment@17:target:0", "/fragment@24:target:0", "/fragment@30:target:0", "/fragment@40:target:0", "/fragment@44:target:0";
