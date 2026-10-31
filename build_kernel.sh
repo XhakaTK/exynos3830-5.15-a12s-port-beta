@@ -6,7 +6,7 @@
 set -e
 
 TREE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-CLANG_DIR=${CLANG_DIR:-"$HOME/PegasusKernel_Exynos3830/toolchains/clang/host/linux-x86/clang-r614150"}
+CLANG_DIR=${CLANG_DIR:-"$TC_DIR/clang/host/linux-x86/clang-r614150"}
 JOBS=${JOBS:-$(nproc --all)}
 TARGETS=${*:-}
 
